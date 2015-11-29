@@ -560,6 +560,9 @@ NetPanel.prototype = Obj.extend(ActivablePanel,
             var lines = file.postText.split("\n");
             Win.openNewTab(file.href, lines[lines.length-1]);
         }
+        else if(file.method === 'POST'){
+            Win.openNewTab(file.href, ' ');
+        }
         else
         {
             Win.openNewTab(file.href, null);
